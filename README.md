@@ -118,7 +118,7 @@ Este KPI mide la eficiencia en la detección y notificación de eventos sísmico
 ## Link de los datasets
 https://drive.google.com/drive/folders/1ujrPcokGmVWx-feOcKnkvmp1UN86B12Q
 
-## Link del Modelo de Machine Learning de Clasificación de Sismos
+## Link del Producto Final del Proyecto
 https://jersonbgb-projectfinal-group12-ml-sismos.streamlit.app/
 
 ## Bibliografía
