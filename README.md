@@ -77,7 +77,7 @@ El alcance del proyecto consistirá en definir y desarrollar un modelo de predic
 El diagrama ER representa la estructura de la base de datos utilizada para almacenar los datos sísmicos. Se ha considerado la adición de una tabla "Calendar" para facilitar el seguimiento y análisis de los eventos sísmicos en función de la fecha y el tiempo.
 
 <p align="center">
-<img src="https://github.com/HolyGrace/SistemaAlertaSismica/blob/master/img/Diagrama.bmp"> 
+<img src="https://github.com/HolyGrace/SistemaAlertaSismica/blob/master/img/ERD.jpg"> 
 </p>
 
 ## Diccionario de Datos
