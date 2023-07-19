@@ -17,7 +17,7 @@
   juansebastianarias1@gmail.com
   
   [Linkedin](https://www.linkedin.com/in/juan-sebastian-arias-ayala)
-- Jerson Jimenez Beltrán
+- Jerson Brayan Gimenes Beltrán
   
   jerson.gimenesbeltran@gmail.com
   
@@ -121,19 +121,22 @@ El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
 **Visualización de los datos en un dashboard de PowerBI.**
 
 ## KPIs (Indicadores Clave de Rendimiento)
-### KPI de reducción del tiempo de detección y notificación:
-- **Objetivo:** Reducir el tiempo promedio de detección y notificación de eventos sísmicos en 5 minutos mensualmente.
-- **Variables utilizadas:** 'time', 'updated' (USGS)
-### Análisis y funcionalidad:
-Este KPI mide la eficiencia en la detección y notificación de eventos sísmicos, buscando reducir el tiempo transcurrido entre la detección inicial y la actualización de la información en al menos 5 minutos mensualmente. Un menor tiempo promedio indica una mayor agilidad en la detección y comunicación de los eventos sísmicos, lo cual es fundamental para una respuesta oportuna y la toma de medidas de seguridad por parte de la población afectada.
-### KPI de precisión de localización:
-- **Objetivo:** Minimizar el promedio de error del epicentro sísmico en un 3% por país anualmente.  
-- **Variables utilizadas:** 'longitude', 'latitude', 'horizontalError'  
-- **Análisis y funcionalidad:** Este KPI busca determinar el promedio de error del epicentro sísmico en un país y reducirlo en un 3% anualmente. Una menor precisión en la localización puede afectar la toma de decisiones y las medidas preventivas necesarias. Monitorear este KPI permite evaluar el progreso en la reducción del error y tomar medidas para mejorar la precisión de la localización de los eventos sísmicos en cada país.  
-### Otros KPIs posibles
-- **Número de sismos registrados:** Este KPI mide la actividad sísmica en la región donde se implementa el proyecto y permite evaluar la eficacia de las medidas preventivas.  
-- **Nivel de conciencia de la población:** Este KPI evalúa el grado de conocimiento y conciencia de la población sobre los sismos, lo cual es fundamental para una respuesta adecuada y la adopción de medidas de seguridad.
+- **Reducción Anual del Número de Personas Afectadas por Sismos en Perú en un 30% en Comparación al Año Anterior.**
 
+  Su funcionalidad radica en medir la efectividad de las estrategias implementadas para proteger a la población y disminuir los impactos de los sismos, buscando reducir significativamente el número de personas afectadas en comparación con el año anterior. Este KPI permite monitorear y evaluar el progreso en la reducción de los riesgos sísmicos, impulsando así la mejora continua de las políticas y acciones de protección civil en Perú.
+
+- **Reducción Anual del Número de Personas Damnificadas por Sismos en Perú en un 20% en Comparación al Año Anterior.**
+
+  Este indicador busca demostrar la disminución progresiva de personas afectadas por desastres naturales de sismos, promoviendo así la seguridad y el bienestar de la población peruana. Al reducir en un 20% el número de damnificados en comparación con el año anterior, se evidencia una mejora significativa en la capacidad de respuesta, prevención y protección ante eventos sísmicos, lo que refleja la eficacia de las políticas y acciones implementadas en este ámbito.
+
+- **Reducción Anual del Número Total de Perdidas Materiales por Sismos en Perú en un 35% en Comparación al Año Anterior.**
+
+  El objetivo de este kpi es lograr una disminución del 35% en las pérdidas materiales causadas por los terremotos en comparación con el año anterior. Este indicador permite evaluar el éxito de las estrategias implementadas para fortalecer la resiliencia y la capacidad de respuesta ante desastres naturales, proporcionando una medida cuantitativa de la mejora en la protección de los recursos y la infraestructura en el Perú.
+
+- **Aumentar la Cantidad de Usuarios del Sistema de Alerta Sísmica en 2500 usuarios para el Próximo Mes.**
+
+  Este KPI proporciona una medida cuantitativa de crecimiento, permitiendo evaluar el desempeño y la eficacia de las acciones tomadas para atraer nuevos usuarios. Al alcanzar este objetivo de aumentar la cantidad de usuarios en 2500, se logra fortalecer la cobertura del sistema de alerta sísmica y contribuir a la seguridad y protección de una mayor cantidad de personas ante posibles eventos sísmicos.
+  
 ## Stack tecnológico
 - **-AWS:** Plataforma de nube de Amazon que proporciona una amplia gama de servicios, incluyendo almacenamiento, procesamiento en streaming, internet de las cosas, entre otros.  
 - **AWS Datalake:** Utilizado para almacenar los datos sísmicos. Es un repositorio centralizado diseñado para almacenar, procesar y proteger grandes cantidades de datos.  
