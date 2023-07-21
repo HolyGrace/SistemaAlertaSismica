@@ -1,4 +1,4 @@
-![Logo de Henry](https://camo.githubusercontent.com/35b81f213ddb0e019b3567f6982d740bb2d01ae5dd712a1537e09e826e940228/68747470733a2f2f643331757a386c77666d796e38672e636c6f756466726f6e742e6e65742f4173736574732f6c6f676f2d68656e72792d77686974652d6c672e706e67)
+w![Logo de Henry](https://camo.githubusercontent.com/35b81f213ddb0e019b3567f6982d740bb2d01ae5dd712a1537e09e826e940228/68747470733a2f2f643331757a386c77666d796e38672e636c6f756466726f6e742e6e65742f4173736574732f6c6f676f2d68656e72792d77686974652d6c672e706e67)
 
 # <h1 align="center">**Sistema de Alerta Sísmica**</h1>
 
@@ -21,7 +21,7 @@
   
   jerson.gimenesbeltran@gmail.com
   
-  [Linkedin](http://www.linkedin.com/in/jerson-gimenes-18978b262)
+  [Linkedin](https://www.linkedin.com/in/jerson-gimenes-beltran/)
 - Pablo Alberto Duque Marín
   
   pabdus3000@gmail.com
