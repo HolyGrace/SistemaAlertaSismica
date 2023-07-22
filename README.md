@@ -1,10 +1,16 @@
 <p align=center><img src=https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png><p>
 
-# <h1 align="center">**Sistema de Alerta Sísmica**</h1>
+# <h1 align="center">**Sistema de Alertas Sísmicas**</h1>
 
 <p align="center">
-<img src="https://t3.ftcdn.net/jpg/05/02/46/30/360_F_502463037_RgxJf9Qhjd6TeasdeLEVkqwAzWYiTJFd.jpg"> 
+<img src="https://imgmedia.larepublica.pe/640x377/larepublica/migration/images/MGQ4EMJTTNGWPIKNXLCXXHNPSU.webp"> 
 </p>
+
+<center>
+  
+###### *Terremoto de Pisco, Perú - Agosto de 2007. Devastador sismo de magnitud 8.0 que impactó la región de Pisco, considerado uno de los más destructivos en la historia de Perú*
+
+</center>
 
 ### Integrantes:
 - Pedro Cornejo Mori
