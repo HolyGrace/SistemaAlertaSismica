@@ -1,4 +1,4 @@
-w![Logo de Henry](https://camo.githubusercontent.com/35b81f213ddb0e019b3567f6982d740bb2d01ae5dd712a1537e09e826e940228/68747470733a2f2f643331757a386c77666d796e38672e636c6f756466726f6e742e6e65742f4173736574732f6c6f676f2d68656e72792d77686974652d6c672e706e67)
+<p align=center><img src=https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png><p>
 
 # <h1 align="center">**Sistema de Alerta Sísmica**</h1>
 
@@ -17,7 +17,7 @@ w![Logo de Henry](https://camo.githubusercontent.com/35b81f213ddb0e019b3567f6982
   juansebastianarias1@gmail.com
   
   [Linkedin](https://www.linkedin.com/in/juan-sebastian-arias-ayala)
-- Jerson Brayan Gimenes Beltrán
+- Jerson Brayan Gimenes Beltrán - Data Scientist
   
   jerson.gimenesbeltran@gmail.com
   
@@ -84,15 +84,15 @@ El diagrama ER representa la estructura de la base de datos utilizada para almac
 
 A continuación se muestra el diccionario de datos para la base de datos de Sismos:
 
-- **'time':** Indica la fecha en formato UTC en la que ocurrió el sismo.  -
-- **'latitude':** Representa la latitud geográfica del epicentro del sismo.  
-- **'longitude':** Representa la longitud geográfica del epicentro del sismo.  
-- **'depth':** Indica la profundidad en kilómetros desde la superficie terrestre a la que se produjo el sismo.  
-- **'mag':** Es la magnitud del sismo, medida cuantitativa de la energía liberada durante el evento sísmico. Se encuentra en magnitud momento (Mw).  
-- **'updated':** Indica la fecha y hora de la última actualización de la información del sismo en el dataset.  
-- **'place':** Proporciona la ubicación geográfica general donde ocurrió el sismo, como el nombre del país, estado o ciudad.  
-- **'horizontalError':** Indica el error estimado en la ubicación horizontal del epicentro del sismo.  
-- **'id_country':** Contiene los identificadores únicos de los países donde ocurrieron los sismos.  
+- **time:** Indica la fecha en formato UTC en la que ocurrió el sismo.  -
+- **latitude:** Representa la latitud geográfica del epicentro del sismo.  
+- **longitude:** Representa la longitud geográfica del epicentro del sismo.  
+- **depth:** Indica la profundidad en kilómetros desde la superficie terrestre a la que se produjo el sismo.  
+- **mag:** Es la magnitud del sismo, medida cuantitativa de la energía liberada durante el evento sísmico. Se encuentra en magnitud momento (Mw).  
+- **updated:** Indica la fecha y hora de la última actualización de la información del sismo en el dataset.  
+- **place:** Proporciona la ubicación geográfica general donde ocurrió el sismo, como el nombre del país, estado o ciudad.  
+- **horizontalError:** Indica el error estimado en la ubicación horizontal del epicentro del sismo.  
+- **id_country:** Contiene los identificadores únicos de los países donde ocurrieron los sismos.  
 
 ## Workflow
 
@@ -110,15 +110,15 @@ El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
 ### Configuración inicial:
 - **a.** Se crea una cuenta en AWS y se configura el cliente de terminal de AWS para levantar la infraestructura en la región OHIO-us-east-
 
-**Almacenamiento de los datos en un datalake de AWS.**
+- **b.** Almacenamiento de los datos en un datalake de AWS.
 
-**Uso de una API para acceder a los datos almacenados en el datalake.**
+- **c.** Uso de una API para acceder a los datos almacenados en el datalake.
 
-**Procesamiento de los datos utilizando el servicio Lambda de AWS.**
+- **d.** Procesamiento de los datos utilizando el servicio Lambda de AWS.
 
-**Almacenamiento de los datos procesados en el servicio S3 de AWS, que es el principal servicio de almacenamiento de archivos en AWS.**
+- **e.** Almacenamiento de los datos procesados en el servicio S3 de AWS, que es el principal servicio de almacenamiento de archivos en AWS.
 
-**Visualización de los datos en un dashboard de PowerBI.**
+- **f.** Visualización de los datos en un dashboard de PowerBI.
 
 ## KPIs (Indicadores Clave de Rendimiento)
 - **Reducción Anual del Número de Personas Afectadas por Sismos en Perú en un 30% en Comparación al Año Anterior.**
@@ -137,13 +137,11 @@ El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
 
   Este KPI proporciona una medida cuantitativa de crecimiento, permitiendo evaluar el desempeño y la eficacia de las acciones tomadas para atraer nuevos usuarios. Al alcanzar este objetivo de aumentar la cantidad de usuarios en 2500, se logra fortalecer la cobertura del sistema de alerta sísmica y contribuir a la seguridad y protección de una mayor cantidad de personas ante posibles eventos sísmicos.
   
-## Stack tecnológico
-- **-AWS:** Plataforma de nube de Amazon que proporciona una amplia gama de servicios, incluyendo almacenamiento, procesamiento en streaming, internet de las cosas, entre otros.  
+## AWS Cloud Stack
+- **AWS:** Plataforma de nube de Amazon que proporciona una amplia gama de servicios, incluyendo almacenamiento, procesamiento en streaming, internet de las cosas, entre otros.  
 - **AWS Datalake:** Utilizado para almacenar los datos sísmicos. Es un repositorio centralizado diseñado para almacenar, procesar y proteger grandes cantidades de datos.  
 - **AWS Lambda:** Utilizado para procesar los datos sísmicos y almacenarlos en el servicio S3 de AWS. Es un servicio informático sin servidor que permite ejecutar código sin necesidad de aprovisionar o administrar servidores.  
-- **AWS S3:** Utilizado para almacenar los datos procesados. Es el principal servicio de almacenamiento de archivos en AWS, que ofrece rentabilidad, seguridad y diversas configuraciones y gestiones del ciclo de vida de los archivos.  
-- **PowerBI:** Utilizado para visualizar los datos sísmicos. Es una plataforma unificada y escalable de inteligencia empresarial con funciones de auto*servicio apta para grandes empresas.
-
+- **AWS S3:** Utilizado para almacenar los datos procesados. Es el principal servicio de almacenamiento de archivos en AWS, que ofrece rentabilidad, seguridad y diversas configuraciones y gestiones del ciclo de vida de los archivos.
 
 ## Sistema de Alertas Pro (SAP)
 
@@ -160,12 +158,25 @@ Notificaciones a través de Whatsapp: Además de los mensajes de texto, SAP tamb
 
 El objetivo de SAP es brindar a la población una herramienta efectiva para estar informados sobre eventos sísmicos y tomar medidas preventivas en caso de ser necesario. La plataforma se esfuerza por garantizar la precisión y la rapidez en la entrega de alertas para aumentar la seguridad y la conciencia de la comunidad ante situaciones de riesgo.
 
-## Link de los datasets
-https://drive.google.com/drive/folders/1ujrPcokGmVWx-feOcKnkvmp1UN86B12Q
+## Stack Tecnológico General
+[![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white&labelColor=101010)](https://code.visualstudio.com/docs)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://docs.python.org/3/) 
+[![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white&labelColor=101010)](https://aws.amazon.com/es/free/?gclid=Cj0KCQjw_O2lBhCFARIsAB0E8B9Hkiiw-3Bn1fREwAKYGhcurWpAF8I0UZohtrB0sH_C0-iqzrrzLHcaAmSnEALw_wcB&trk=1b5e0cad-6939-407d-b265-d513ac796285&sc_channel=ps&ef_id=Cj0KCQjw_O2lBhCFARIsAB0E8B9Hkiiw-3Bn1fREwAKYGhcurWpAF8I0UZohtrB0sH_C0-iqzrrzLHcaAmSnEALw_wcB:G:s&s_kwcid=AL!4422!3!647999789244!p!!g!!aws!19685311604!143348651942)
+[![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=white&labelColor=101010)](https://learn.microsoft.com/en-us/power-bi/) 
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=101010)](https://dev.mysql.com/doc/) 
 
-## Link del Producto Final del Proyecto
-https://jersonbgb-projectfinal-group12-ml-sismos.streamlit.app/
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white&labelColor=101010)](https://docs.streamlit.io/) 
+[![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white&labelColor=101010)](https://git-scm.com/doc)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://docs.github.com/en)
 
-## Bibliografía
+## [Link de los datasets](https://drive.google.com/drive/folders/1ujrPcokGmVWx-feOcKnkvmp1UN86B12Q)
+En el transcurso del proyecto, se han utilizado datasets extraídos de las APIs de la USGS, de la IGP y de la INDECI. El enlace proporcionado conduce a estos datasets, incluidos aquellos a los que se les aplicó un proceso de Extracción, Transformación y Carga (ETL) y aquellos que no fueron sometidos a este proceso.
+
+## ***[Link del Producto Final del Proyecto](https://jersonbgb-projectfinal-group12-ml-sismos.streamlit.app/)***
+
+## Bibliografía:
+- https://earthquake.usgs.gov/fdsnws/event/1/
+- https://ultimosismo.igp.gob.pe/datos-sismicos
+- https://portal.indeci.gob.pe/direccion-politicas-y-planes/base-de-datos-de-emergencia-y-danos/
 - https://www.sgp.org.pe/alerta-peru-un-pais-altamente-sismico/
 - https://es.statista.com/estadisticas/1379060/indice-de-riesgo-sismico-de-lo-spaises-de-america-latina-y-el-caribe/#:~:text=Seg%C3%BAn%20el%20%C3%ADndice%20de%20riesgo,%2C%20con%20un%209%2C8.
