@@ -18,7 +18,7 @@
   pe.cor.12345@gmail.com
   
   [Linkedin](https://www.linkedin.com/in/pedro-cornejo-mori)
-- Juan Sebastian Arias Ayala
+- Juan Sebastian Arias Ayala - Data Engineer
   
   juansebastianarias1@gmail.com
   
