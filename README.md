@@ -100,7 +100,7 @@ A continuación se muestra el diccionario de datos para la base de datos de Sism
 - **horizontalError:** Indica el error estimado en la ubicación horizontal del epicentro del sismo.  
 - **id_country:** Contiene los identificadores únicos de los países donde ocurrieron los sismos.  
 
-## Workflow
+## Diagrama de arquitectura en AWS
 
 <p align="center">
 <img src="https://github.com/pabdus/SistemaAlertaSismica/blob/master/img/aws.jpeg"> 
@@ -113,18 +113,21 @@ El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
 - **b.** Se realiza una extracción de datos de las APIs de las páginas del USGS y del IGP. Se descarga la información mundial de sismos de los últimos 10 años, filtrando solo los países Japón, USA y Perú, y se guarda en formato CSV.
 - **c.** Se crea un ETL para subir la información al cloud y realizar las pruebas correspondientes.
 
-### Configuración inicial:
-- **a.** Se crea una cuenta en AWS y se configura el cliente de terminal de AWS para levantar la infraestructura en la región OHIO-us-east-
+### Flujo de Procesamiento de Datos en AWS:
+1. **Recolección de datos desde la API:**
+Los datos son recolectados de la API mediante una función Lambda. Esta función se configura para ejecutarse periódicamente basado en un disparador de tiempo.
 
-- **b.** Almacenamiento de los datos en un datalake de AWS.
+2. **Proceso de tratamiento de datos:**
+Dentro de la misma función Lambda, los datos recolectados se procesan para normalizarlos y prepararlos para su almacenamiento. El resultado del proceso es un archivo CSV que contiene los datos tratados.
 
-- **c.** Uso de una API para acceder a los datos almacenados en el datalake.
+3. **Almacenamiento en S3 (Data Lake):**
+El archivo CSV generado por la función Lambda se almacena en un bucket de Amazon S3, que funciona como un data lake. S3 es un servicio de almacenamiento altamente escalable y duradero de AWS.
 
-- **d.** Procesamiento de los datos utilizando el servicio Lambda de AWS.
+4. **Crawler de Glue para descubrir nuevos archivos:**
+AWS Glue es utilizado para descubrir nuevos archivos en el bucket de S3. Glue es un servicio de ETL (Extract, Transform, Load) que permite el procesamiento de datos y la preparación para su análisis.
 
-- **e.** Almacenamiento de los datos procesados en el servicio S3 de AWS, que es el principal servicio de almacenamiento de archivos en AWS.
-
-- **f.** Visualización de los datos en un dashboard de PowerBI.
+5. **Carga de datos en la base de datos RDS:**
+Una vez que Glue detecta un nuevo archivo en S3, carga los datos normalizados en la base de datos relacional RDS.
 
 ## KPIs (Indicadores Clave de Rendimiento)
 - **Reducción Anual del Número de Personas Afectadas por Sismos en Perú en un 30% en Comparación al Año Anterior.**
@@ -144,10 +147,14 @@ El siguiente es el flujo de trabajo utilizado para procesar los datos sísmicos:
   Este KPI proporciona una medida cuantitativa de crecimiento, permitiendo evaluar el desempeño y la eficacia de las acciones tomadas para atraer nuevos usuarios. Al alcanzar este objetivo de aumentar la cantidad de usuarios en 2500, se logra fortalecer la cobertura del sistema de alerta sísmica y contribuir a la seguridad y protección de una mayor cantidad de personas ante posibles eventos sísmicos.
   
 ## AWS Cloud Stack
-- **AWS:** Plataforma de nube de Amazon que proporciona una amplia gama de servicios, incluyendo almacenamiento, procesamiento en streaming, internet de las cosas, entre otros.  
-- **AWS Datalake:** Utilizado para almacenar los datos sísmicos. Es un repositorio centralizado diseñado para almacenar, procesar y proteger grandes cantidades de datos.  
+Amazon Web Services (AWS) es una plataforma de servicios en la nube proporcionada por Amazon. Ofrece una amplia gama de servicios de infraestructura y aplicaciones que permiten a individuos y empresas ejecutar aplicaciones y almacenar datos de manera escalable y segura en la nube. AWS es conocido por su flexibilidad, escalabilidad y alta disponibilidad, lo que lo convierte en una opción popular para una variedad de proyectos y aplicaciones. Esta es la razón por la que decidimos utilizar esta plataforma para nuestro proyecto. Estos son los servicios de AWS que se utilizaron:
+
 - **AWS Lambda:** Utilizado para procesar los datos sísmicos y almacenarlos en el servicio S3 de AWS. Es un servicio informático sin servidor que permite ejecutar código sin necesidad de aprovisionar o administrar servidores.  
 - **AWS S3:** Utilizado para almacenar los datos procesados. Es el principal servicio de almacenamiento de archivos en AWS, que ofrece rentabilidad, seguridad y diversas configuraciones y gestiones del ciclo de vida de los archivos.
+- **IAM Roles (Identify and Access Management):** IAM es un servicio de AWS que permite gestionar usuarios y permisos de acceso a los diferentes servicios de la plataforma. Los roles de IAM se utilizan para asignar permisos específicos a usuarios, aplicaciones o servicios, siguiendo el principio de "menos privilegios", lo que ayuda a mejorar la seguridad al garantizar que cada entidad tenga solo los permisos necesarios para realizar sus funciones.
+- **CloudWatch:** CloudWatch es un servicio de monitoreo y observabilidad en la nube de AWS. Permite recopilar y rastrear métricas, eventos y logs de los recursos y aplicaciones en AWS. Los datos recopilados por CloudWatch se pueden utilizar para configurar alarmas, obtener información sobre el rendimiento de los recursos y realizar análisis para optimizar el uso de la infraestructura.
+- **AWS Glue:** AWS Glue es un servicio de ETL (Extract, Transform, Load) totalmente administrado. Permite descubrir, catalogar y transformar datos de diferentes fuentes en formatos que pueden ser utilizados por otras aplicaciones y servicios en AWS. Glue automatiza gran parte del trabajo pesado asociado con ETL, lo que facilita la preparación de datos para el análisis y la carga en bases de datos y data lakes.
+- **RDS (Relational Database Service):** RDS es un servicio de AWS que facilita la configuración, operación y escalado de bases de datos relacionales en la nube. RDS admite varios motores de bases de datos, como MySQL, PostgreSQL, Oracle y SQL Server, y maneja tareas de administración como copias de seguridad, actualizaciones de software y mantenimiento, permitiendo a los desarrolladores centrarse en sus aplicaciones en lugar de la gestión de bases de datos.
 
 ## Sistema de Alertas Pro (SAP)
 
